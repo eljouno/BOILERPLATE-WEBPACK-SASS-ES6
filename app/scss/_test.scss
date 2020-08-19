@@ -1,0 +1,5 @@
+.test {
+  color: $color-text;
+  @include font-size(45px);
+  text-align: center;
+}

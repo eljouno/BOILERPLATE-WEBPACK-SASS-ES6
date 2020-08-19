@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const copyWebpackPlugin = require('copy-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const imageminPlugin = require('imagemin-webpack-plugin').default
+const { html } = require('html-loader')
 
 module.exports = {
   entry: {
@@ -16,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.m?js$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
@@ -50,6 +51,10 @@ module.exports = {
           esModule: false,
         },
       },
+      {
+        test: /\.html$/,
+        loader: 'ejs-compiled-loader',
+      }
     ],
   },
   plugins: [

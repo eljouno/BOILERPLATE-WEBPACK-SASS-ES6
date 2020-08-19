@@ -1,7 +1,6 @@
 // Import only custom js
 
 import './custom/test';
-import './custom/jquery-exemple';
 import './custom/utility';
 import './custom/detect-browser';
 import './custom/object-fit';
