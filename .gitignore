@@ -33,4 +33,4 @@ Thumbs.db
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-/package-lock.json
+package-lock.json
