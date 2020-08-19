@@ -9,7 +9,7 @@ $margin: 3%;
 $margin-brick: $margin/2;
 
 @for $i from 1 to 12 {
-  .gbl-grid--#{$i} {
+  .gbl-grid__#{$i} {
 	overflow: hidden;
 	width: 100%;
 	margin: 0 0 2em;
@@ -24,7 +24,7 @@ $margin-brick: $margin/2;
 	}
 
   }
-  .gbl-rgrid--#{$i} {
+  .gbl-rgrid__#{$i} {
 	overflow: hidden;
 	width: 100%;
 	margin: 0 0 2em;
@@ -48,7 +48,7 @@ $margin-brick: $margin/2;
   justify-content: space-between;
 
   @for $i from 1 to 12 {
-		&--items-#{$i} {
+		&__items-#{$i} {
 			overflow: hidden;
 			width: 100%;
 			margin-bottom: 1em;
@@ -117,7 +117,6 @@ $margin-brick: $margin/2;
 		}
 	}
 }
-
 
 .grid-bck {
 	display: grid;

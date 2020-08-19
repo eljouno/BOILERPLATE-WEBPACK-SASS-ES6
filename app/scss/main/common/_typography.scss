@@ -1,40 +1,6 @@
 $base-responsive-font-size: 16px !default;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 $text-large-spacing;
-  line-height: $heading-line-height;
-  font-weight: normal;
-  // @include break-word;
-}
-
-h2 {
-  @include font-size(18px);
-
-  @include media-min (XL) {
-	@include font-size(19px);
-  }
-  @include media-min (XL) {
-	@include font-size(20px);
-  }
-}
-
-h3, h4 {
-  @include font-size(15px);
-
-  @include media-min (L) {
-	@include font-size(16px);
-  }
-  @include media-min (XL) {
-	@include font-size(16px);
-  }
-}
-
-h1:not([class]) {
+h1 {
   margin: 0 0 1em;
   padding: 30px 0 0;
   text-transform: uppercase;
@@ -42,13 +8,13 @@ h1:not([class]) {
   @include font-size(24px);
 
   @include media-min(XL) {
-	margin: 1em 0 1em;
-	padding: 0;
-	@include font-size(30px);
+    margin: 1em 0 1em;
+    padding: 0;
+    @include font-size(30px);
   }
 }
 
-h2:not([class]) {
+h2 {
   margin: 0 0 1em;
   padding: 30px 0 0;
   text-transform: uppercase;
@@ -56,13 +22,13 @@ h2:not([class]) {
   @include font-size(20px);
 
   @include media-min(XL) {
-	margin: 1em 0 1em;
-	padding: 0;
-	@include font-size(24px);
+    margin: 1em 0 1em;
+    padding: 0;
+    @include font-size(24px);
   }
 }
 
-h3:not([class]) {
+h3 {
   margin: 2em 0 1em;
   text-transform: uppercase;
   @include font-base-bold;
@@ -75,7 +41,7 @@ h3:not([class]) {
   }
 }
 
-h4:not([class]) {
+h4 {
   @include font-base-bold;
   @include font-size(18px);
 
@@ -86,19 +52,19 @@ h4:not([class]) {
   }
 }
 
-h5:not([class]) {
+h5 {
   @include font-base-bold;
   @include font-size(16px);
 }
 
-h6:not([class]) {
+h6 {
   @include font-base-bold-italic;
   @include font-size(16px);
 }
 
 
 p {
-  margin: 0 0 $text-small-spacing;
+  margin: 0 0 10px;
   @include font-size(16px);
   // @include break-word;
 }
@@ -132,7 +98,7 @@ a {
 hr {
   display: block;
   height: 1px;
-  margin: $text-verylarge-spacing 0;
+  margin: 10px 0;
   padding: 0;
 
   border-bottom: 1px solid $color-grey-light;

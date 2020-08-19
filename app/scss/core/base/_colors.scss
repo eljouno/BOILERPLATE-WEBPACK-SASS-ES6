@@ -1,23 +1,16 @@
 // common
 $color-black: #000;
+$color-white: #fff;
 $color-black-light: #222;
 $color-grey: #6f6f6f;
-$color-grey-dark: #333;
 $color-grey-light: #e7e7e7;
-$color-grey-xlight: #f8faff;
 $color-grey-xxlight: #eef3ff;
-$color-grey-xdark: #cfcfcf;
-$color-grey-med: #584446;
-$color-white: #fff;
-$color-footer: #bcb4b5;
+
 // text
 $color-text: #584446;
 $color-error: #e50006;
 
 // color
-$color-blue: #2193f4;
-$color-blue-dark: #014282;
-$color-red: #ae0032;
 $color-link: #2193f4;
 
 
@@ -25,12 +18,12 @@ $color-link: #2193f4;
 $themes: (
 	'default': (
 		'class': '',
-		'color': $color-blue,
+		'color': $color-error,
 		'color-text': $color-text,
 	),
 	'red': (
 		'class': '.theme-red',
-		'color': $color-red,
+		'color': $color-link,
 		'color-text': $color-white,
 	)
 );

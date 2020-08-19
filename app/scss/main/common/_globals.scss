@@ -9,8 +9,6 @@
     &:last-child {
         margin-bottom: 0;
     }
-
-    @include custom-selection($color-link);
 }
 html,
 body {
@@ -23,14 +21,7 @@ body {
   color: $color-text;
   @include font-base-regular;
   @include font-size(16px);
-  @include font-smoothing;
   line-height: 1.5;
-
-  // @include responsive-font-size(64px); // added on <html> in order to use rem units
-  @include font-smoothing;
-
-  // Avoid visible rectangle when taping on iOS/Android
-  @include webkit-no-tap-highlight;
 }
 body {
   min-height: 100vh;
