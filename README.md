@@ -1,4 +1,4 @@
-# 📦 Webpack sass es6 Boilerplate
+# 📦 Webpack SASS ES6 Boilerplate
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/badge/dependencies-up%20to%20date-green) ![David](https://img.shields.io/badge/node--version-12.18.1-blue)
 
