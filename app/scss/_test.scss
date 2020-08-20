@@ -29,3 +29,26 @@ $color-blue: #2193f4;
     }
   }
 }
+
+.flex {
+  color: $color-white;
+
+  &-item {
+    background: grey;
+    height: 250px;
+
+    @include media-min(M) {
+      height: 320px;
+    }
+
+    @include media-min(L) {
+      height: 500px;
+    }
+
+    img {
+      @include object-fit(cover, center);
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
