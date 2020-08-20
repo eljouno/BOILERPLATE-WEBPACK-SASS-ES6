@@ -4,4 +4,8 @@
 *
  */
 
-console.log('its-work');
+const test = (name) => console.log(`Hello ${name}`)
+
+export default test
+
+

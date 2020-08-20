@@ -9,6 +9,7 @@ module.exports = merge(common, {
   devServer: {
     historyApiFallback: true,
     contentBase: paths.src,
+    watchContentBase: true,
     open: true,
     compress: true,
     hot: true,
