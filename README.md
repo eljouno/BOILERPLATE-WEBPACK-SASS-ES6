@@ -27,18 +27,6 @@ You can view the development server at `localhost:8080`.
 npm run build
 ```
 
-> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
-
-```bash 
-npm i -g http-server
-```
-
-You can view the deploy by creating a server in `dist`. 
-
-```bash
-cd dist && http-server
-```
-
 ## Features
 
 - [Webpack](https://webpack.js.org/)
@@ -63,16 +51,16 @@ cd dist && http-server
 - [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class.
 - [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel.
 - [`babel-eslint`](https://github.com/babel/babel-eslint) - Lint Babel code.
-  - [`eslint`](https://github.com/eslint/eslint) - ESLint.
+- [`eslint`](https://github.com/eslint/eslint) - ESLint.
 
 ### Loaders
 
 - [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and Webpack.
 - [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS.
-  - [`node-sass`](https://github.com/sass/node-sass) - Node Sass.
+- [`node-sass`](https://github.com/sass/node-sass) - Node Sass.
 - [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS.
-  - [`cssnano`](https://github.com/cssnano/cssnano) - Optimize and compress PostCSS.
-  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS.
+- [`cssnano`](https://github.com/cssnano/cssnano) - Optimize and compress PostCSS.
+- [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS.
 - [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolves CSS imports into JS.
 - [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM.
 - [`eslint-loader`](https://webpack.js.org/loaders/eslint-loader/) - Use ESLint with Webpack.
