@@ -37,25 +37,4 @@ module.exports = merge(common, {
       },
     ],
   },
-  optimization: {
-    minimize: true,
-    minimizer: [new OptimizeCSSAssetsPlugin({})],
-    runtimeChunk: 'single',
-    // This breaks apart commonly shared deps (react, semantic ui, etc) into one shared bundle. React, etc
-    // won't change as often as the app code, so this chunk can be cached separately from app code.
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/][\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
-  },
 })
