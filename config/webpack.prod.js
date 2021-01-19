@@ -1,5 +1,5 @@
 const paths = require('./paths')
-const merge = require('webpack-merge')
+const {merge} = require('webpack-merge')
 const common = require('./webpack.common.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserJSPlugin = require('terser-webpack-plugin')
@@ -38,7 +38,8 @@ module.exports = merge(common, {
     ],
   },
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimize: true,
+    minimizer: [new OptimizeCSSAssetsPlugin({})],
     runtimeChunk: 'single',
     // This breaks apart commonly shared deps (react, semantic ui, etc) into one shared bundle. React, etc
     // won't change as often as the app code, so this chunk can be cached separately from app code.
