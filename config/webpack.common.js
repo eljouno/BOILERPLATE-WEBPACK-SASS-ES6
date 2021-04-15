@@ -62,6 +62,7 @@ module.exports = {
     new copyWebpackPlugin({
       patterns: [
         { from: paths.img, to: paths.build + '/img' },
+        { from: paths.fonts, to: paths.build + '/fonts' },
       ],
     }),
     new imageminPlugin({
