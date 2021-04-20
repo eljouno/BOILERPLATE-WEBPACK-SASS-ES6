@@ -1,6 +1,7 @@
 # 📦 Webpack SASS ES6 Boilerplate
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/badge/dependencies-up%20to%20date-green) ![David](https://img.shields.io/badge/node--version-15.11-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/badge/dependencies-up%20to%20date-green) ![David](https://img.shields.io/badge/node--version-12.18.1-blue)
+
 
 Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, and development/production optimization.
 
