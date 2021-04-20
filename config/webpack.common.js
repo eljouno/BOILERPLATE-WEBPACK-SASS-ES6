@@ -4,6 +4,8 @@ const copyWebpackPlugin = require('copy-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 const { html } = require('html-loader')
+const loaders = require('./loaders');
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -16,11 +18,7 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
+      loaders.JSLoader,
       {
         test: /\.(scss|css)$/,
         use: [
@@ -71,6 +69,10 @@ module.exports = {
       filename: 'index.html', // output file name
       template: paths.templates + '/pages/index.html', // template file
     }),
-    new ESLintPlugin()
+    new ESLintPlugin({
+      overrideConfigFile: path.resolve(__dirname, '../.eslintrc'),
+      context: paths.src + '/js',
+      files: '**/*.js',
+    })
   ],
 }
