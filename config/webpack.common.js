@@ -2,7 +2,7 @@ const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const copyWebpackPlugin = require('copy-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
-const imageminPlugin = require('imagemin-webpack-plugin').default
+const ESLintPlugin = require('eslint-webpack-plugin');
 const { html } = require('html-loader')
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.(scss|css)$/,
@@ -27,7 +27,6 @@ module.exports = {
           'style-loader',
           { loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader', options: { sourceMap: true } },
         ],
       },
@@ -54,6 +53,9 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'ejs-compiled-loader',
+        options: {
+          htmlmin: false
+        }
       }
     ],
   },
@@ -61,21 +63,14 @@ module.exports = {
     new CleanWebpackPlugin(),
     new copyWebpackPlugin({
       patterns: [
-        { from: paths.img, to: paths.build + '/img' },
-        { from: paths.fonts, to: paths.build + '/fonts' },
+        { from: paths.assets, to: paths.build + '/assets' },
       ],
-    }),
-    new imageminPlugin({
-      disable: process.env.NODE_ENV !== 'production',
-      test: /\.(?:ico|gif|png|jp?eg|webp|svg)$/i,
-      pngquant: {
-        quality: '95-100'
-      }
     }),
     new htmlWebpackPlugin({
       title: 'Webpack Boilerplate',
-      template: paths.src + '/index.html', // template file
-      filename: 'index.html', // output file
+      filename: 'index.html', // output file name
+      template: paths.templates + '/pages/index.html', // template file
     }),
+    new ESLintPlugin()
   ],
 }
