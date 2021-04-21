@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![webpack-current](https://img.shields.io/badge/webpack-v5.27.2-green?logo=webpack) ![David](https://img.shields.io/badge/dependencies-up%20to%20date-green) ![David](https://img.shields.io/badge/node--version-15.14.0-blue)
 
 
-Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, and development/production optimization.
+Minimal Webpack 5 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, and development/production optimization.
 
 ## Installation
 
