@@ -3,9 +3,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const copyWebpackPlugin = require('copy-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
-const { html } = require('html-loader')
 const loaders = require('./loaders');
 const path = require('path');
+let htmlPageNames = ['index','test'];
+let multipleHtmlPlugins = htmlPageNames.map(name => {
+  return new htmlWebpackPlugin({
+    template: paths.templates + `/pages/${name}.html`, // relative path to the HTML files
+    filename: `${name}.html`, // output HTML files
+    /*    chunks: [`${name}`] // respective JS files*!/*/
+  })
+});
 
 module.exports = {
   entry: {
@@ -74,5 +81,5 @@ module.exports = {
       context: paths.src + '/js',
       files: '**/*.js',
     })
-  ],
+  ].concat(multipleHtmlPlugins)
 }
